@@ -1,15 +1,6 @@
 from django.contrib import admin
 
-# from .models import Utilisateur
-# from .models import Department
-# from .models import Major
-from .models import Conseiller
-from .models import Visiteur
-from .models import Etudiant
-from .models import Administrateur
-from .models import Demande, Notification, NotificationEtudiant
-
-
+from .models import *
 
 
 admin.site.register(Demande)
@@ -19,6 +10,23 @@ admin.site.register(Etudiant)
 admin.site.register(Administrateur)
 admin.site.register(Notification)
 admin.site.register(NotificationEtudiant)
+admin.site.register(Feedback)
+admin.site.register(Event)
+admin.site.register(DisponibiliteConseiller)
+admin.site.register(Dossier)
+admin.site.register(Message)
+admin.site.register(Alert)
+admin.site.register(Question)
+admin.site.register(Quote)
+admin.site.register(TODO)
+admin.site.register(Collaborateur)
+admin.site.register(Observation)
+admin.site.register(Ressource)
+
+
+
+
+
 
 
 

@@ -15,8 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from website.api.views import login_user, success, login_etudiant, successEtudiant
-
+from website.api.views import login_user, success, logout_user, login_etudiant, successEtudiant, login_admin
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,8 +26,10 @@ urlpatterns = [
     path('success/', success, name='success'),
     path('loginEtudiant/', login_etudiant, name='loginEtudiant'),
     path('successEtudiant/',successEtudiant , name='successEtudiant'),
+    path('connect/', login_admin , name='login_admin'),
+    path('logoutUser/', logout_user , name='logout_user'),
 
-]
+]+  static(settings.MEDIA_URL,  document_root=settings.MEDIA_ROOT)
 
 
 
